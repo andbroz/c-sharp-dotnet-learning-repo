@@ -8,3 +8,7 @@
 - [C# for Beginners](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN)
 - [Devblogs C# on microsoft](https://devblogs.microsoft.com/dotnet/category/csharp/)
 
+## Repos
+
+[C# language repo](https://github.com/dotnet/csharplang)
+[.Net Core repo](https://github.com/dotnet/core)
