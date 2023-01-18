@@ -1,14 +1,21 @@
 ﻿class Program
 {
-    static void Main()
+    static async Task<int> Main(string[] args)
     {
-        var numbers = new int[] { 1, 2, 3, 4, 5 };
-        var sum = 0;
-
-        for (var n = 0; n < numbers.Length; n++)
+        if (args.Length == 0)
         {
-            sum += numbers[n];
+            return -1;
         }
-        Console.WriteLine(sum);
+
+        foreach (var arg in args)
+        {
+            Console.WriteLine($"The arg is: {arg}");
+        }
+
+        await Task.Delay(1000);
+
+        Console.WriteLine($"The number of args is: {args.Length}");
+
+        return args.Length;
     }
 }
