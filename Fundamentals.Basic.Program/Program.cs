@@ -1,5 +1,4 @@
-﻿using People;
-using System;
+﻿using System;
 
 
 namespace Fundamentals
@@ -7,12 +6,19 @@ namespace Fundamentals
 
     class Program
     {
-        static void Main()
+        public record Person(string FirstName, string LastName, string[] PhoneNumbers);
+
+        public static void Main()
         {
-            Person adam = new Person("adam",44);
+            var phoneNumbers = new string[2];
+            Person person1 = new("Nancy", "Davolio", phoneNumbers);
+            Person person2 = new("Nancy", "Davolio", phoneNumbers);
+            Console.WriteLine(person1 == person2); // output: True
 
-            Console.WriteLine(adam);
+            person1.PhoneNumbers[0] = "555-1234";
+            Console.WriteLine(person1 == person2); // output: True
 
+            Console.WriteLine(ReferenceEquals(person1, person2)); // output: False
         }
 
 
@@ -21,22 +27,4 @@ namespace Fundamentals
    
 }
 
-namespace People
-{
-    class Person
-    {
-        public string name;
-        public int age;
 
-        public Person(string name, int age)
-        {
-            this.name = name;
-            this.age = age;
-        }
-
-        public override string ToString()
-        {
-            return $"Name: {this.name}, Age: {this.age}";
-        }
-    }
-}
