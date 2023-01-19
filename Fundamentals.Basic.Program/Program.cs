@@ -1,16 +1,42 @@
-﻿class Program
+﻿using People;
+using System;
+
+
+namespace Fundamentals
 {
-    static void Main()
+
+    class Program
     {
-        System.Collections.Generic.List<int> list = new List<int>();
-
-        list.Add(1);
-        list.Add(2);
-        list.Add(3);
-
-        foreach(int item in list)
+        static void Main()
         {
-            Console.WriteLine(item);
+            Person adam = new Person("adam",44);
+
+            Console.WriteLine(adam);
+
+        }
+
+
+    }
+
+   
+}
+
+namespace People
+{
+    class Person
+    {
+        public string name;
+        public int age;
+
+        public Person(string name, int age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {this.name}, Age: {this.age}";
         }
     }
 }
