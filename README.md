@@ -10,5 +10,5 @@
 
 ## Repos
 
-[C# language repo](https://github.com/dotnet/csharplang)
-[.Net Core repo](https://github.com/dotnet/core)
+- [C# language repo](https://github.com/dotnet/csharplang)
+- [.Net Core repo](https://github.com/dotnet/core)
