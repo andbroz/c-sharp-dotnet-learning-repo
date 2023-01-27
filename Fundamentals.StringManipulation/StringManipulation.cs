@@ -53,6 +53,19 @@ namespace Fundamentals.StringManipulation
             Console.WriteLine("");
         }
 
-        // https://www.youtube.com/watch?v=ioi__WRETk4 10:50
+        public static void EscapeString()
+        {
+            Console.WriteLine("\n\t 3. Escape string\n");
+
+
+            var results = "This is my \"test\"solution. To escape quotes use backslash before it \\\"";
+            Console.WriteLine(results);
+
+            // Escaping backslash in path -> use double backslash \\
+            var testPath = "C:\\Demo\\Test.txt";
+            Console.WriteLine(testPath);
+        }
+
+        // https://www.youtube.com/watch?v=ioi__WRETk4 13:18
     }
 }
