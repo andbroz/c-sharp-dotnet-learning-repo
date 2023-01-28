@@ -7,3 +7,7 @@ StringManipulation.StringConversion();
 StringManipulation.StringAsArray();
 
 StringManipulation.EscapeString();
+
+StringManipulation.AppendingStrings();
+
+StringManipulation.InterpolationAndLiteral();

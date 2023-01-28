@@ -64,8 +64,56 @@ namespace Fundamentals.StringManipulation
             // Escaping backslash in path -> use double backslash \\
             var testPath = "C:\\Demo\\Test.txt";
             Console.WriteLine(testPath);
+
+            // string literal is created by adding @ beginning of string
+            var testPathLiteral = @"C:\Demo\Test.txt";
+            Console.WriteLine(testPathLiteral);
         }
 
-        // https://www.youtube.com/watch?v=ioi__WRETk4 13:18
+        public static void AppendingStrings()
+        {
+            Console.WriteLine("\n\t 4. Appending strings\n");
+
+            string firstName = "Janko";
+            string lastName = "Muzykant";
+
+            string results;
+
+
+            // appending strings by + operator
+            results = firstName + ", my name is " + firstName + " " + lastName;
+            Console.WriteLine(results);
+
+            // using string.Format() 
+            results = string.Format("{0}, my name is {0} {1}", firstName, lastName);
+            Console.WriteLine(results);
+
+
+            // string interpolation
+            results = $"{firstName}, my name is {firstName} {lastName}";
+            Console.WriteLine(results);
+
+
+        }
+
+        public static void InterpolationAndLiteral()
+        {
+            Console.WriteLine("\n\t 5. Interpolation and Literal\n");
+
+            string testString = "Michael Jordan";
+            // I want to fill <name> with a variable => string results = $@"C:\demo\<name>\Test.txt";
+            string results = $@"C:\demo\{testString}\Test.txt";
+
+            Console.WriteLine(results);
+            
+            // put quotes around Test in literal string -> possible when $@ interpolated literal string
+            results = $@"C:\demo\{testString}\{"\""}Test{"\""}.txt";
+
+            Console.WriteLine(results);
+
+
+        }
+
+        // https://www.youtube.com/watch?v=ioi__WRETk4 28:16
     }
 }
