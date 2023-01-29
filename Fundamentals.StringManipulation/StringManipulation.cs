@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -105,12 +106,80 @@ namespace Fundamentals.StringManipulation
             string results = $@"C:\demo\{testString}\Test.txt";
 
             Console.WriteLine(results);
-            
+
             // put quotes around Test in literal string -> possible when $@ interpolated literal string
             results = $@"C:\demo\{testString}\{"\""}Test{"\""}.txt";
 
             Console.WriteLine(results);
 
+
+        }
+
+        public static void StringBuilderDemo()
+        {
+            Console.WriteLine("\n\t 6. Cost of string\n");
+            // string are very expensive. when you create a string, it is immutable, it can't be changed
+            Console.WriteLine("strings are very expensive. when you create a string, it is immutable, it can't be changed");
+
+
+
+            // i create space in memory for string "Test" and assign it to testString variable.
+            string testString = "Test";
+
+            // here i create new space in memory for "Tom" and assign it to variable testSting, the "Test" string is discarded and not changed.
+            // "Test" is now a garbage, to be collected by garbage collector
+            testString = "Tom";
+
+            // we create a new memory space for concateneted string and assign it again to testString.
+            // "Tom" is garbage to be garbage collected. until gargage collection occurs it still takes up memory. 
+            testString += " is a cool guy.";
+
+            Stopwatch regularStopWatch = new Stopwatch();
+
+            string sentence = "";
+            regularStopWatch.Start();
+
+            // adding new char to string is exponential operation and not linear. 
+            for (var i = 0; i < 10000; i++)
+            {
+                sentence += i;
+
+                if(i%1000 == 0)
+                {
+                    Console.Write(".");
+                }
+            }
+            Console.WriteLine(".");
+
+            regularStopWatch.Stop();
+            Console.WriteLine($"Regular StopWatch: {regularStopWatch.ElapsedMilliseconds} ms");
+
+            Stopwatch builderStopWatch = new Stopwatch();
+
+            StringBuilder buildSentence = new();
+            builderStopWatch.Start();
+
+            // adding new char to string is exponential operation and not linear. 
+            for (var i = 0; i < 100000; i++)
+            {
+                buildSentence.Append(i);
+
+                if (i % 1000 == 0)
+                {
+                    Console.Write(".");
+                }
+            }
+            Console.WriteLine(".");
+
+            builderStopWatch.Stop();
+            Console.WriteLine($"String Builder StopWatch: {builderStopWatch.ElapsedMilliseconds} ms");
+
+
+        }
+
+        public static void WorkingWithArrays()
+        {
+            Console.WriteLine("\n\t 7. Working With Arrays\n");
 
         }
 

@@ -11,3 +11,7 @@ StringManipulation.EscapeString();
 StringManipulation.AppendingStrings();
 
 StringManipulation.InterpolationAndLiteral();
+
+StringManipulation.StringBuilderDemo();
+
+StringManipulation.WorkingWithArrays();
