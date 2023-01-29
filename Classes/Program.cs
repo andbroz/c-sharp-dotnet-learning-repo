@@ -68,3 +68,12 @@ lineOfCredit.MakeWithdrawal(5000m, DateTime.Now, "Emergency funds for repairs");
 lineOfCredit.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
 lineOfCredit.PerformMonthEndTransactions();
 Console.WriteLine(lineOfCredit.GetAccountHistory());
+
+
+if(Object.Equals(savings, lineOfCredit))
+{
+    Console.WriteLine($"{nameof(savings)} object has same identity as {nameof(lineOfCredit)}");
+} else
+{
+    Console.WriteLine($"{nameof(savings)} object has not same identity as {nameof(lineOfCredit)}");
+};
