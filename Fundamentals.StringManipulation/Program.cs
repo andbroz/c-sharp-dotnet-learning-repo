@@ -15,3 +15,5 @@ StringManipulation.InterpolationAndLiteral();
 StringManipulation.StringBuilderDemo();
 
 StringManipulation.WorkingWithArrays();
+
+StringManipulation.PadAndTrim();

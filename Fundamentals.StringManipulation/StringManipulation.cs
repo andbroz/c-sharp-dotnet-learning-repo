@@ -144,7 +144,7 @@ namespace Fundamentals.StringManipulation
             {
                 sentence += i;
 
-                if(i%1000 == 0)
+                if (i % 1000 == 0)
                 {
                     Console.Write(".");
                 }
@@ -180,6 +180,40 @@ namespace Fundamentals.StringManipulation
         public static void WorkingWithArrays()
         {
             Console.WriteLine("\n\t 7. Working With Arrays\n");
+
+            int[] ages = new int[] { 6, 7, 8, 3, 5 };
+            string results;
+
+            results = String.Concat(ages);
+
+            Console.WriteLine(results);
+
+            results = String.Join(",", ages);
+            Console.WriteLine(results);
+
+            Console.WriteLine();
+
+            string testString = "Jan,Maria,Sylwia,Zenek";
+
+            var names = testString.Split(',');
+
+            foreach (var name in names)
+            {
+                Console.WriteLine(name);
+            }
+
+            Array.ForEach(names, x => Console.Write(x + "\t"));
+
+            Console.WriteLine();
+
+            testString = "Jan  ,  Maria  , Sylwia   ,   Zenek   ";
+            names = testString.Split(", ");
+            Array.ForEach(names, x => Console.Write("|" + x.Trim().PadLeft(10)));
+        }
+
+        public static void PadAndTrim()
+        {
+            Console.WriteLine("\n\t 8. Pad and Trim\n");
 
         }
 
