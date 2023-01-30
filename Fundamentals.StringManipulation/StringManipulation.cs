@@ -215,8 +215,35 @@ namespace Fundamentals.StringManipulation
         {
             Console.WriteLine("\n\t 8. Pad and Trim\n");
 
+            string testString = "            Hello World!              ";
+            string results;
+
+            Console.WriteLine(testString + ".");
+
+            results = testString.TrimStart();
+
+            Console.WriteLine(results + ".");
+
+
+            results = testString.TrimEnd();
+
+            Console.WriteLine(results + ".");
+
+            results = testString.Trim();
+
+            Console.WriteLine(results + ".");
+
+            testString = "1.15";
+
+            results = testString.PadLeft(10, '0');
+
+            Console.WriteLine(results);
+            results = testString.PadRight(10, '0');
+
+            Console.WriteLine(results);
+
         }
 
-        // https://www.youtube.com/watch?v=ioi__WRETk4 28:16
+        // https://www.youtube.com/watch?v=ioi__WRETk4 54:42
     }
 }
