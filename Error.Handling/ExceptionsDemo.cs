@@ -44,6 +44,19 @@ namespace Error.Handling
                         Console.WriteLine("Ups something went wrong.");
                         throw new ArgumentOutOfRangeException(nameof(inputText), "Input text should not be empty");
                     }
+                    if (input.KeyChar.Equals('J'))
+                    {
+                        Console.WriteLine("Ups something went wrong.");
+                        throw new JanuszException();
+                    }
+                    if (input.KeyChar.Equals('g'))
+                    {
+                        Console.WriteLine("Ups something went wrong.");
+                        var ex = new Exception();
+                        ex.Data.Add("MY_CUSTOM_ERR", "is see g in the tunnel");
+                        
+                        throw ex;
+                    }
 
                     if (input.KeyChar.Equals('q'))
                     {
@@ -64,9 +77,19 @@ namespace Error.Handling
                 {
                     Console.WriteLine(e.ToString());
                 }
+                catch (JanuszException ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
                 // the least specific exception
                 catch (Exception e)
                 {
+
+                    if (e.Data.Contains("MY_CUSTOM_ERR"))
+                    {
+                        string myErr = (string)(e.Data["MY_CUSTOM_ERR"] ?? "unknown");
+                        Console.WriteLine(myErr);
+                    }
                     // handle all other exceptions
                     Console.WriteLine(e.ToString());
                 }
