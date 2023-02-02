@@ -92,6 +92,7 @@ namespace Error.Handling
                     }
                     // handle all other exceptions
                     Console.WriteLine(e.ToString());
+                    throw;
                 }
                 // after all exceptions we can implement signle finally block
                 finally
