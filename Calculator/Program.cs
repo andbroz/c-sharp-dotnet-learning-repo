@@ -1,9 +1,10 @@
-﻿using System;
-using MyCalc;
+﻿using CalculatorLibrary;
 
 
 
 bool endApp = false;
+
+Calculator calculator = new Calculator();
 
 
 while (!endApp)
@@ -53,11 +54,11 @@ while (!endApp)
 
     try
     {
-        if(operation is null)
+        if (operation is null)
         {
             throw new AggregateException("invalid math operation");
         }
-        result = Calculator.DoOperation(cleanNum1, cleanNum2, operation, out operationName);
+        result = calculator.DoOperation(cleanNum1, cleanNum2, operation, out operationName);
 
         if (double.IsNaN(result))
         {
@@ -79,4 +80,6 @@ while (!endApp)
     endApp = Console.ReadLine()?.ToLower() != "y";
 
 }
+
+calculator.Finish();
 
