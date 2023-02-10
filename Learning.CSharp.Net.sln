@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TuplesDemo", "TuplesDemo\Tu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{8B98CF1B-6344-4930-8FF5-1DD428877082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorLibrary", "CalculatorLibrary\CalculatorLibrary.csproj", "{C49D8FC1-0587-4DDD-B559-1B51F7E82F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorLibrary", "CalculatorLibrary\CalculatorLibrary.csproj", "{C49D8FC1-0587-4DDD-B559-1B51F7E82F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics.Demo.Program", "Generics.Demo.Program\Generics.Demo.Program.csproj", "{37BAE820-6B6A-4BB7-B969-ACC6A7FD50F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{C49D8FC1-0587-4DDD-B559-1B51F7E82F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C49D8FC1-0587-4DDD-B559-1B51F7E82F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C49D8FC1-0587-4DDD-B559-1B51F7E82F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BAE820-6B6A-4BB7-B969-ACC6A7FD50F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BAE820-6B6A-4BB7-B969-ACC6A7FD50F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BAE820-6B6A-4BB7-B969-ACC6A7FD50F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BAE820-6B6A-4BB7-B969-ACC6A7FD50F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
